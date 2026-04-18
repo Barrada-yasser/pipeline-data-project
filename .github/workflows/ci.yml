@@ -1,20 +1,7 @@
 - name: DBT run
         run: |
           mkdir -p ~/.dbt
-          cat > ~/.dbt/profiles.yml << EOF
-          sales_project:
-            target: dev
-            outputs:
-              dev:
-                type: postgres
-                host: localhost
-                port: 5433
-                user: admin
-                password: admin
-                dbname: dev_db
-                schema: public
-                threads: 1
-          EOF
+          cp dbt/sales_project/profiles.yml ~/.dbt/profiles.yml
           cd dbt/sales_project
           dbt run
 

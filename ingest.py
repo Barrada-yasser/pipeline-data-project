@@ -15,8 +15,7 @@ conn = psycopg2.connect(
 )
 cursor = conn.cursor()
 # Vide les tables avant de recharger
-cursor.execute("TRUNCATE TABLE raw_clients, raw_produits, raw_commandes;")
-print("🗑️ Tables vidées")
+
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS raw_clients (
         id INTEGER, nom TEXT, email TEXT, ville TEXT
@@ -33,7 +32,8 @@ cursor.execute("""
         quantite INTEGER, date_commande DATE, statut TEXT
     );
 """)
-
+cursor.execute("TRUNCATE TABLE raw_clients, raw_produits, raw_commandes;")
+print("🗑️ Tables vidées")
 def charger_csv(fichier, table, cursor):
     with open(fichier, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)

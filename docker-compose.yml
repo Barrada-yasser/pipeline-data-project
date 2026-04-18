@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+
+  postgres_dev:
+    image: postgres:15
+    container_name: postgres_dev
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: dev_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata_dev:/var/lib/postgresql/data
+
+  postgres_prod:
+    image: postgres:15
+    container_name: postgres_prod
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: prod_db
+    ports:
+      - "5434:5432"
+    volumes:
+      - pgdata_prod:/var/lib/postgresql/data
+
+  airflow:
+    image: apache/airflow:2.8.1
+    container_name: airflow
+    depends_on:
+      - postgres_dev
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/airflow.db
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
+      - ./ingest.py:/opt/airflow/ingest.py
+      - airflow_logs:/opt/airflow/logs
+    ports:
+      - "8080:8080"
+    command: standalone
+
+volumes:
+  pgdata_dev:
+  pgdata_prod:
+  airflow_logs:

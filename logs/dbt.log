@@ -1,0 +1,60 @@
+[0m13:49:30.836256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016B38F2E900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016B36D44050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016B3B0B3C50>]}
+
+
+============================== 13:49:30.905950 | d0b2751d-afe9-4100-93b3-028d6ee11581 ==============================
+[0m13:49:30.905950 [info ] [MainThread]: Running with dbt=1.11.8
+[0m13:49:30.908354 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\GSM\\.dbt', 'invocation_command': 'dbt init sales_project', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m13:49:30.967096 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\GSM\.dbt
+[0m13:49:30.971821 [debug] [MainThread]: Starter project path: C:\Users\GSM\AppData\Roaming\Python\Python313\site-packages\dbt\include\starter_project
+[0m13:49:31.021045 [info ] [MainThread]: 
+Your new dbt project "sales_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:49:31.021969 [info ] [MainThread]: Setting up your profile.
+[0m13:53:16.329722 [info ] [MainThread]: Profile sales_project written to C:\Users\GSM\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m13:53:16.331416 [debug] [MainThread]: Command `dbt init` succeeded at 13:53:16.331194 after 225.80 seconds
+[0m13:53:16.331980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016B3B3450F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016B3B32D6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016B3B0B6F10>]}
+[0m13:53:16.332515 [debug] [MainThread]: Flushing usage events
+[0m13:53:17.223921 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:06:36.301206 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF7445E900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF72288050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF765E7D90>]}
+
+
+============================== 14:06:36.313282 | e8e495ce-cbbc-445e-8602-6a2feec09e69 ==============================
+[0m14:06:36.313282 [info ] [MainThread]: Running with dbt=1.11.8
+[0m14:06:36.314560 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\GSM\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m14:06:36.315404 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\GSM\pipeline-data-project\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m14:06:36.316817 [debug] [MainThread]: Command `dbt run` failed at 14:06:36.316642 after 0.24 seconds
+[0m14:06:36.317335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF7672E8B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF7675E9F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF765F3CE0>]}
+[0m14:06:36.317943 [debug] [MainThread]: Flushing usage events
+[0m14:06:37.120029 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:12:30.788402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F69D35E900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F69B178050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F69F4E7D90>]}
+
+
+============================== 14:12:30.799166 | c91f9c95-dd04-4d5c-8239-81b243635e86 ==============================
+[0m14:12:30.799166 [info ] [MainThread]: Running with dbt=1.11.8
+[0m14:12:30.800269 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\GSM\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt test', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m14:12:30.800860 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\GSM\pipeline-data-project\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m14:12:30.802081 [debug] [MainThread]: Command `dbt test` failed at 14:12:30.801942 after 0.27 seconds
+[0m14:12:30.802485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F69F62E8B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F69F65A9F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F69F4E3CE0>]}
+[0m14:12:30.802882 [debug] [MainThread]: Flushing usage events
+[0m14:12:31.537905 [debug] [MainThread]: An error was encountered while trying to flush usage events

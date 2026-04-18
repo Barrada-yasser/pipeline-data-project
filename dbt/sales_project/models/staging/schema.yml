@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_commandes
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: statut
+        tests:
+          - accepted_values:
+              values: ['livré', 'en_cours']
+
+  - name: fct_revenus
+    columns:
+      - name: client_id
+        tests:
+          - not_null

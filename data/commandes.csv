@@ -1,0 +1,9 @@
+id,client_id,produit_id,quantite,date_commande,statut
+1,1,1,1,2024-01-05,livré
+2,2,3,2,2024-01-07,livré
+3,3,2,1,2024-01-10,annulé
+4,1,5,1,2024-02-01,livré
+5,4,4,2,2024-02-14,en_cours
+6,5,1,1,2024-02-20,livré
+7,2,2,3,2024-03-01,en_cours
+8,3,5,1,2024-03-05,livré
